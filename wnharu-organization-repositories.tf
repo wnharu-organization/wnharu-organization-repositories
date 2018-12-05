@@ -1,9 +1,9 @@
-data "github_repository" "wnharu-organization-repositories" {
+data "github_repository" "repo" {
   name = "wnharu-organization-repositories"
 }
 
 resource "github_branch_protection" "branch_protection" {
-  repository = "${data.github_repository.wnharu-organization-repositories.name}"
+  repository = "${data.github_repository.repo.name}"
   branch = "master"
   enforce_admins = false
 
