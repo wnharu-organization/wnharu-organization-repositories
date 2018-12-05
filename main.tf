@@ -1,5 +1,6 @@
 terraform {
   required_version = "0.11.10"
+
   backend "s3" {
     bucket = "wnharu-github-circleci"
     key    = "terraform.tfstate"

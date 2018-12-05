@@ -3,12 +3,12 @@ data "github_repository" "repo" {
 }
 
 resource "github_branch_protection" "branch_protection" {
-  repository = "${data.github_repository.repo.name}"
-  branch = "master"
+  repository     = "${data.github_repository.repo.name}"
+  branch         = "master"
   enforce_admins = false
 
   required_status_checks {
-    strict = false
+    strict   = false
     contexts = ["ci/circleci"]
   }
 }
