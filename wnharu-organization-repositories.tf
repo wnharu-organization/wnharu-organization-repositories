@@ -9,6 +9,6 @@ resource "github_branch_protection" "branch_protection" {
 
   required_status_checks {
     strict   = false
-    contexts = ["ci/circleci"]
+    contexts = ["ci/circleci: terraform-plan"]
   }
 }
